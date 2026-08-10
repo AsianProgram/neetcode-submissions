@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        bool val = false;
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i+1; j < nums.size(); j++) {
+                if (nums.at(i) == nums.at(j)) {
+                    val = true;
+                }
+            }
+        }
+        return val;
+    }
+};
